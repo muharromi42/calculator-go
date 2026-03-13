@@ -3,32 +3,30 @@ package main
 import "fmt"
 
 func main() {
-	var angka_pertama float64
-	var angka_kedua float64
+	var angkaPertama float64
+	var angkaKedua float64
 	var operator string
 	var result float64
 
 	fmt.Println("masukkan angka pertama :")
-	fmt.Scanln(&angka_pertama)
+	fmt.Scanln(&angkaPertama)
 	fmt.Println("masukkan operator :")
 	fmt.Scanln(&operator)
 	fmt.Println("masukkan angka kedua :")
-	fmt.Scanln(&angka_kedua)
+	fmt.Scanln(&angkaKedua)
 
 	switch operator {
 	case "+":
-		result = angka_pertama + angka_kedua
-		fmt.Println("hasil opearsi :", result)
+		result = angkaPertama + angkaKedua
 	case "-":
-		result = angka_pertama - angka_kedua
-		fmt.Println("hasil opearsi :", result)
+		result = angkaPertama - angkaKedua
 	case "/":
-		result = angka_pertama / angka_kedua
-		fmt.Println("hasil opearsi :", result)
+		result = angkaPertama / angkaKedua
 	case "*":
-		result = angka_pertama * angka_kedua
-		fmt.Println("hasil operasi :", result)
+		result = angkaPertama * angkaKedua
 	default:
 		fmt.Println("data tidak valid")
 	}
+
+	fmt.Println(angkaPertama, operator, angkaKedua, "=", result)
 }

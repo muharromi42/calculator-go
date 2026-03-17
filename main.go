@@ -9,13 +9,15 @@ func main() {
 	var result float64
 
 	fmt.Println("masukkan angka pertama :")
+	// menggukan _, untuk mengosongkan nilai kembalian yang pertama karna tidak di gunakan
 	_, err := fmt.Scanln(&angkaPertama)
 	if err != nil {
 		fmt.Println("input tidak valid harus berupa angka!", err)
-		return
+		return //untuk keluar dari program kalau error jadi tidak lanjut kebawah
 	}
 
 	fmt.Println("masukkan operator (+, -, *, /) :")
+	// menggukana err = karena var err sudah dideklarasikan di atas jadi sekarang hanya menimpa nilainya saja
 	_, err = fmt.Scanln(&operator)
 	if err != nil {
 		fmt.Println("input tidak valid harus berupa operator matematika (+, -, *, /)", err)
